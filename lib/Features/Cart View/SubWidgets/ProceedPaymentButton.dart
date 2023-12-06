@@ -1,4 +1,6 @@
 import "package:flutter/material.dart";
+import "package:flutter_application_2/Core/AppRouter.dart";
+import "package:go_router/go_router.dart";
 
 import "../../../Core/AppColors.dart";
 import "../../../Core/AppFonts.dart";
@@ -9,7 +11,9 @@ class ProceedPaymentButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: () {
+        GoRouter.of(context).push(AppRouter.paymentView);
+      },
       style: ElevatedButton.styleFrom(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8),

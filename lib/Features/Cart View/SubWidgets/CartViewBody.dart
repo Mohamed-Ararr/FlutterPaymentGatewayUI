@@ -5,7 +5,6 @@ import "package:flutter_application_2/Features/Cart%20View/SubWidgets/PriceDisco
 import "package:flutter_application_2/Features/Cart%20View/SubWidgets/ProceedPaymentButton.dart";
 import "package:flutter_application_2/Features/Cart%20View/SubWidgets/ProductsList.dart";
 
-import "../../../Core/AppColors.dart";
 import 'CustomTotalListTile.dart';
 
 class CartViewBody extends StatelessWidget {
@@ -14,17 +13,7 @@ class CartViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        title: Text(
-          "My Cart",
-          style: TextStyle(
-            color: AppColors.blackColor,
-          ),
-        ),
-        centerTitle: true,
-      ),
+      appBar: buildAppBar(title: "My Cart"),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Padding(

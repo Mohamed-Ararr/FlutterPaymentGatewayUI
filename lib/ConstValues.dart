@@ -1,5 +1,23 @@
 import 'package:flutter/material.dart';
 
+import 'Core/AppColors.dart';
+
+// CUSTOM METHODS
+AppBar buildAppBar({required String title, Widget? backButton}) {
+  return AppBar(
+    leading: backButton,
+    backgroundColor: Colors.transparent,
+    elevation: 0,
+    title: Text(
+      title,
+      style: TextStyle(
+        color: AppColors.blackColor,
+      ),
+    ),
+    centerTitle: true,
+  );
+}
+
 // PADDING CONSTANTS
 EdgeInsets kPaddingH15V12 = const EdgeInsets.symmetric(
   horizontal: 15,
