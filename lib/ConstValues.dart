@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'Core/AppColors.dart';
+import 'Core/AppFonts.dart';
 
 // CUSTOM METHODS
 AppBar buildAppBar({required String title, Widget? backButton}) {
@@ -15,6 +16,26 @@ AppBar buildAppBar({required String title, Widget? backButton}) {
       ),
     ),
     centerTitle: true,
+  );
+}
+
+InputDecoration buildInputDecoration(String labelText, String hintText) {
+  return InputDecoration(
+    labelText: labelText,
+    labelStyle: AppFonts.font17B500Black.copyWith(color: Colors.black54),
+    hintText: hintText,
+    enabledBorder: OutlineInputBorder(
+      borderSide: BorderSide(color: AppColors.greyColor),
+      borderRadius: kBr8,
+    ),
+    focusedBorder: OutlineInputBorder(
+      borderSide: BorderSide(color: AppColors.tealColor),
+      borderRadius: kBr8,
+    ),
+    errorBorder: OutlineInputBorder(
+      borderSide: BorderSide(color: AppColors.redColor),
+      borderRadius: kBr8,
+    ),
   );
 }
 

@@ -1,6 +1,4 @@
 import "package:flutter/material.dart";
-import "package:flutter_application_2/ConstValues.dart";
-import "package:flutter_application_2/Core/AppColors.dart";
 
 import "PaymentMethodItem.dart";
 
