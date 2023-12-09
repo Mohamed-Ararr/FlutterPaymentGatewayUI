@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
 
 import '../../../ConstValues.dart';
-import '../../../Core/Custom Widgets/CustomButton.dart';
 
 class CustomCardPaymentBody extends StatefulWidget {
   const CustomCardPaymentBody({super.key});
@@ -22,6 +21,7 @@ class _CustomCardPaymentBodyState extends State<CustomCardPaymentBody> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         CreditCardWidget(
           isHolderNameVisible: true,
@@ -61,14 +61,6 @@ class _CustomCardPaymentBodyState extends State<CustomCardPaymentBody> {
             setState(() {});
           },
           formKey: formKey,
-        ),
-        const SizedBox(height: 15),
-        SizedBox(
-          width: MediaQuery.of(context).size.width * 0.93,
-          child: CustomButton(
-            title: "Confirm Payment",
-            onPressed: () {},
-          ),
         ),
       ],
     );

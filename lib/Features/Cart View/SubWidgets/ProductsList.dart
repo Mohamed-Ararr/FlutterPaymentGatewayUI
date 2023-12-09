@@ -8,7 +8,7 @@ class ProductsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: List.generate(
-        5,
+        2,
         (index) => const ProductCard(),
       ),
     );

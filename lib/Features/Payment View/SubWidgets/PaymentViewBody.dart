@@ -16,16 +16,23 @@ class PaymentViewBody extends StatelessWidget {
         title: "Payment Detail",
         backButton: BackButton(color: AppColors.blackColor),
       ),
-      body: SingleChildScrollView(
+      body: CustomScrollView(
         physics: const BouncingScrollPhysics(),
-        child: Column(
-          children: const [
-            PaymentMethodsListView(),
-            SizedBox(height: 15),
-            CustomCardPaymentBody(),
-            SizedBox(height: 10),
-          ],
-        ),
+        slivers: [
+          const SliverToBoxAdapter(child: PaymentMethodsListView()),
+          const SliverToBoxAdapter(child: CustomCardPaymentBody()),
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Container(
+              margin: kMarginAll16,
+              alignment: Alignment.bottomCenter,
+              child: CustomButton(
+                title: "Confirm Payment",
+                onPressed: () {},
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

@@ -11,7 +11,7 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: kPaddingH15V12,
+      padding: kPaddingH16V12,
       margin: kMarginT10,
       decoration: BoxDecoration(
         boxShadow: [

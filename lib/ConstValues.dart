@@ -40,8 +40,8 @@ InputDecoration buildInputDecoration(String labelText, String hintText) {
 }
 
 // PADDING CONSTANTS
-EdgeInsets kPaddingH15V12 = const EdgeInsets.symmetric(
-  horizontal: 15,
+EdgeInsets kPaddingH16V12 = const EdgeInsets.symmetric(
+  horizontal: 16,
   vertical: 12,
 );
 
@@ -55,6 +55,7 @@ EdgeInsets kPaddingAll1AndHalf = const EdgeInsets.all(1.5);
 
 // MARGIN CONSTANTS
 EdgeInsets kMarginT10 = const EdgeInsets.only(top: 10);
+EdgeInsets kMarginAll16 = const EdgeInsets.all(16);
 
 // BORDER RADIUS CONSTANTS
 BorderRadius kBr8 = BorderRadius.circular(8);
