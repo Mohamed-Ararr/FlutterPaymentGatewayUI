@@ -4,7 +4,11 @@ import 'package:flutter_credit_card/flutter_credit_card.dart';
 import '../../../ConstValues.dart';
 
 class CustomCardPaymentBody extends StatefulWidget {
-  const CustomCardPaymentBody({super.key});
+  const CustomCardPaymentBody(
+      {super.key, required this.formKey, required this.autovalidateMode});
+
+  final GlobalKey<FormState> formKey;
+  final AutovalidateMode autovalidateMode;
 
   @override
   State<CustomCardPaymentBody> createState() => _CustomCardPaymentBodyState();
@@ -16,7 +20,6 @@ class _CustomCardPaymentBodyState extends State<CustomCardPaymentBody> {
   String cardHolderName = "";
   String cvvCode = "";
   bool showBackView = false;
-  GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +37,8 @@ class _CustomCardPaymentBodyState extends State<CustomCardPaymentBody> {
         ),
         CreditCardForm(
           inputConfiguration: InputConfiguration(
-            cardHolderDecoration: buildInputDecoration("Card Holder", ""),
+            cardHolderDecoration:
+                buildInputDecoration("Card Holder", "CARD HOLDER"),
             cardNumberDecoration: buildInputDecoration(
               "Card Number",
               "XXXX XXXX XXXX XXXX",
@@ -60,7 +64,8 @@ class _CustomCardPaymentBodyState extends State<CustomCardPaymentBody> {
             showBackView = creditCardModel.isCvvFocused;
             setState(() {});
           },
-          formKey: formKey,
+          formKey: widget.formKey,
+          autovalidateMode: widget.autovalidateMode,
         ),
       ],
     );

@@ -24,6 +24,10 @@ InputDecoration buildInputDecoration(String labelText, String hintText) {
     labelText: labelText,
     labelStyle: AppFonts.font17B500Black.copyWith(color: Colors.black54),
     hintText: hintText,
+    focusedErrorBorder: OutlineInputBorder(
+      borderSide: BorderSide(color: AppColors.redColor),
+      borderRadius: kBr8,
+    ),
     enabledBorder: OutlineInputBorder(
       borderSide: BorderSide(color: AppColors.greyColor),
       borderRadius: kBr8,

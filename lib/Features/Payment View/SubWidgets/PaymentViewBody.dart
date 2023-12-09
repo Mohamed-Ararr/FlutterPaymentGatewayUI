@@ -6,8 +6,16 @@ import "package:flutter_application_2/Features/Payment%20View/SubWidgets/Payment
 
 import "CustomCardPaymentBody.dart";
 
-class PaymentViewBody extends StatelessWidget {
+class PaymentViewBody extends StatefulWidget {
   const PaymentViewBody({super.key});
+
+  @override
+  State<PaymentViewBody> createState() => _PaymentViewBodyState();
+}
+
+class _PaymentViewBodyState extends State<PaymentViewBody> {
+  GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +28,11 @@ class PaymentViewBody extends StatelessWidget {
         physics: const BouncingScrollPhysics(),
         slivers: [
           const SliverToBoxAdapter(child: PaymentMethodsListView()),
-          const SliverToBoxAdapter(child: CustomCardPaymentBody()),
+          SliverToBoxAdapter(
+              child: CustomCardPaymentBody(
+            formKey: formKey,
+            autovalidateMode: autovalidateMode,
+          )),
           SliverFillRemaining(
             hasScrollBody: false,
             child: Container(
@@ -28,7 +40,14 @@ class PaymentViewBody extends StatelessWidget {
               alignment: Alignment.bottomCenter,
               child: CustomButton(
                 title: "Confirm Payment",
-                onPressed: () {},
+                onPressed: () {
+                  if (formKey.currentState!.validate()) {
+                    formKey.currentState!.save();
+                  } else {
+                    autovalidateMode = AutovalidateMode.always;
+                    setState(() {});
+                  }
+                },
               ),
             ),
           ),
