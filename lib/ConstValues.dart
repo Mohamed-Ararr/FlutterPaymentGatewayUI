@@ -4,9 +4,9 @@ import 'Core/AppColors.dart';
 import 'Core/AppFonts.dart';
 
 // CUSTOM METHODS
-AppBar buildAppBar({required String title, Widget? backButton}) {
+AppBar buildAppBar({required String title}) {
   return AppBar(
-    leading: backButton,
+    leading: BackButton(color: AppColors.blackColor),
     backgroundColor: Colors.transparent,
     elevation: 0,
     title: Text(
