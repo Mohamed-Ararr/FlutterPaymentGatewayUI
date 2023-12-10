@@ -5,6 +5,7 @@ class AppColors {
   static Color blackColor = Colors.black;
   static Color whiteColor = Colors.white;
   static Color greyColor = Colors.grey;
+  static Color midGreyColor = const Color.fromARGB(255, 216, 216, 216);
   static Color lightGreyColor = const Color(0xFF727272);
   static Color orangeColor = Colors.orange;
   static Color lightOrangeColor = const Color(0xA3FF9900);

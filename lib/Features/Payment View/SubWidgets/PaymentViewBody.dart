@@ -46,75 +46,7 @@ class _PaymentViewBodyState extends State<PaymentViewBody> {
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
                     formKey.currentState!.save();
-                    // GoRouter.of(context).push(AppRouter.completedPaymentView);
-                    AwesomeDialog(
-                      context: context,
-                      dialogType: DialogType.success,
-                      dialogBackgroundColor: Color.fromARGB(255, 216, 216, 216),
-                      body: Container(
-                        height: MediaQuery.of(context).size.height * 0.6,
-                        padding: const EdgeInsets.all(15),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text("Thank You!", style: AppFonts.font20B500Black),
-                            const SizedBox(height: 5),
-                            Text(
-                              "Successfully Transfered",
-                              style: AppFonts.font17Black,
-                            ),
-                            const SizedBox(height: 30),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text("Date", style: AppFonts.font17B500Black),
-                                Text("12/09/2023",
-                                    style: AppFonts.font17B500Black),
-                              ],
-                            ),
-                            const SizedBox(height: 10),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text("Time", style: AppFonts.font17B500Black),
-                                Text("10:15 AM",
-                                    style: AppFonts.font17B500Black),
-                              ],
-                            ),
-                            const SizedBox(height: 10),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text("To", style: AppFonts.font17B500Black),
-                                Text("Sam Louis",
-                                    style: AppFonts.font17B500Black),
-                              ],
-                            ),
-                            const SizedBox(height: 20),
-                            const CustomDivider(),
-                            const SizedBox(height: 20),
-                            const CustomTotalListTile(amount: "50\$"),
-                            Container(
-                              decoration: BoxDecoration(
-                                color: AppColors.whiteColor,
-                                borderRadius: kBr8,
-                              ),
-                              child: ListTile(
-                                leading: Icon(
-                                  Icons.credit_card,
-                                  color: AppColors.orangeColor,
-                                  size: 35,
-                                ),
-                                title: Text("Credit Card",
-                                    style: AppFonts.font17B500Black),
-                                subtitle: Text("Master Card **79",
-                                    style: AppFonts.font13LightGrey),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ).show();
+                    completedPaymentPopUp(context).show();
                   } else {
                     autovalidateMode = AutovalidateMode.always;
                     setState(() {});
