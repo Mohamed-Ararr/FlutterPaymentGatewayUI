@@ -1,15 +1,8 @@
-import "package:awesome_dialog/awesome_dialog.dart";
 import "package:flutter/material.dart";
 import "package:flutter_application_2/ConstValues.dart";
-import "package:flutter_application_2/Core/AppColors.dart";
-import "package:flutter_application_2/Core/AppRouter.dart";
 import "package:flutter_application_2/Core/Custom%20Widgets/CustomButton.dart";
 import "package:flutter_application_2/Features/Payment%20View/SubWidgets/PaymentMethodsListView.dart";
-import "package:go_router/go_router.dart";
 
-import "../../../Core/AppFonts.dart";
-import "../../Cart View/SubWidgets/CustomDivider.dart";
-import "../../Cart View/SubWidgets/CustomTotalListTile.dart";
 import "CustomCardPaymentBody.dart";
 
 class PaymentViewBody extends StatefulWidget {
