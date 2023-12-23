@@ -1,5 +1,5 @@
+import 'package:Flutter_Payment_Gateway_Integration/Core/AppRouter.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/Core/AppRouter.dart';
 
 void main() {
   runApp(const PaymentGateway());

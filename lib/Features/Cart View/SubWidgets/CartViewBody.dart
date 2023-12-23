@@ -1,8 +1,8 @@
 import "package:flutter/material.dart";
-import "package:flutter_application_2/ConstValues.dart";
-import "package:flutter_application_2/Features/Cart%20View/SubWidgets/ProductsList.dart";
 
+import "../../../ConstValues.dart";
 import "CartFeesAndButton.dart";
+import "ProductsList.dart";
 
 class CartViewBody extends StatelessWidget {
   const CartViewBody({super.key});

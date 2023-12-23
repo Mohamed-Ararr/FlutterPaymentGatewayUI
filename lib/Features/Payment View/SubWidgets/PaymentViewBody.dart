@@ -1,9 +1,9 @@
 import "package:flutter/material.dart";
-import "package:flutter_application_2/ConstValues.dart";
-import "package:flutter_application_2/Core/Custom%20Widgets/CustomButton.dart";
-import "package:flutter_application_2/Features/Payment%20View/SubWidgets/PaymentMethodsListView.dart";
 
+import "../../../ConstValues.dart";
+import "../../../Core/Custom Widgets/CustomButton.dart";
 import "CustomCardPaymentBody.dart";
+import "PaymentMethodsListView.dart";
 
 class PaymentViewBody extends StatefulWidget {
   const PaymentViewBody({super.key});

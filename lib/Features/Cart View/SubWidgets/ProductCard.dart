@@ -1,9 +1,9 @@
 import "package:flutter/material.dart";
-import "package:flutter_application_2/Features/Cart%20View/SubWidgets/ProductQuantity.dart";
-import "package:flutter_application_2/Features/Cart%20View/SubWidgets/ProductTitleAndPrice.dart";
 
 import "../../../ConstValues.dart";
 import "../../../Core/AppColors.dart";
+import "ProductQuantity.dart";
+import "ProductTitleAndPrice.dart";
 
 class ProductCard extends StatelessWidget {
   const ProductCard({super.key});

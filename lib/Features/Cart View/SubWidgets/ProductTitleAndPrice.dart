@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
-import "package:flutter_application_2/Core/AppFonts.dart";
+
+import "../../../Core/AppFonts.dart";
 
 class ProductTitleAndPrice extends StatelessWidget {
   const ProductTitleAndPrice({super.key});

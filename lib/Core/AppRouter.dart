@@ -1,7 +1,7 @@
-import "package:flutter_application_2/Features/Payment%20View/PaymentView.dart";
 import "package:go_router/go_router.dart";
 
 import "../Features/Cart View/CartView.dart";
+import "../Features/Payment View/PaymentView.dart";
 
 class AppRouter {
   static String cartView = "/";
